@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💗 Surat Untuk Pacarku</title>
+    
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a0a0a 0%, #2d0a1a 25%, #4a1028 50%, #2d0a1a 75%, #1a0a0a 100%);
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* ===== GLOW BACKGROUND ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(255, 50, 120, 0.12) 0%, transparent 70%);
+            animation: glowPulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        
+        /* ============================================================ */
+        /* ===== BACKGROUND LAMPU ===== */
+        /* ============================================================ */
+        .bg-lights {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .bg-light {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: bgLightPulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes bgLightPulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.3); }
+        }
+        
+        /* ============================================================ */
+        /* ===== BUNGA JATUH ===== */
+        /* ============================================================ */
+        .flowers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .flower {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.25;
+            animation: flowerFall linear infinite;
+        }
+        
+        @keyframes flowerFall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.25;
+            }
+            90% {
+                opacity: 0.25;
+            }
+            100% {
+                transform: translateY(110vh) rotate(720deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+        
+        /* ============================================================ */
+        /* ===== KONTEN SURAT ===== */
+        /* ============================================================ */
+        .content {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 20px 20px 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        /* ============================================================ */
+        /* ===== SECTION 1: JUDUL ===== */
+        /* ============================================================ */
+        .section-judul {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .ornament {
+            font-size: 1.2em;
+            color: rgba(255, 50, 120, 0.3);
+            letter-spacing: 8px;
+            margin-bottom: 8px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .emoji-big {
+            font-size: 4.5em;
+            display: block;
+            margin-bottom: 8px;
+            animation: pulseGlow 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 50, 120, 0.3));
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 30px rgba(255, 50, 120, 0.3)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 60px rgba(255, 50, 120, 0.5)); }
+        }
+        
+        .judul-utama {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            font-style: italic;
+            background: linear-gradient(135deg, #ff6b9d 0%, #ff2d78 40%, #d41b5a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            text-shadow: 0 0 60px rgba(255, 45, 120, 0.2);
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .scroll-hint {
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.7em;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            animation: hintPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes hintPulse {
+            0%, 100% { opacity: 0.2; transform: translateY(0); }
+            50% { opacity: 0.6; transform: translateY(5px); }
+        }
+        
+        /* ============================================================ */
+        /* ===== SECTION 2: "hai sayanggg" ===== */
+        /* ============================================================ */
+        .section-hai {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .hai-sayang {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 0 40px rgba(255, 45, 120, 0.2);
+            line-height: 1.3;
+        }
+        
+        .hai-sayang .heart {
+            color: #ff2d78;
+            display: inline-block;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        /* ============================================================ */
+        /* ===== SECTION 3: FOTO + TALI ===== */
+        /* ============================================================ */
+        .section-foto {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px 20px 30px;
+        }
+        
+        .foto-title {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1em;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .foto-title .highlight {
+            color: #ff6b9d;
+        }
+        
+        /* ===== FOTO LIST ===== */
+        .foto-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .foto-item {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 45, 120, 0.05);
+            border: 2px solid rgba(255, 50, 120, 0.12);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+        
+        .foto-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(255, 50, 120, 0.4);
+            box-shadow: 0 12px 50px rgba(255, 45, 120, 0.25);
+        }
+        
+        .foto-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .foto-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .foto-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 12px 10px;
+            background: linear-gradient(transparent, rgba(26, 10, 10, 0.8));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .foto-item:hover .overlay {
+            opacity: 1;
+        }
+        
+        .foto-item .overlay span {
+            font-size: 1.1em;
+            animation: pulseGlow 1.5s ease-in-out infinite;
+        }
+        
+        /* ===== BUNGA DI SEKITAR FOTO ===== */
+        .foto-item .bunga-kiri {
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            animation: bungaKiri 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 50, 120, 0.1));
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .foto-item .bunga-kanan {
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            animation: bungaKanan 3s ease-in-out infinite 1s;
+            filter: drop-shadow(0 0 15px rgba(255, 50, 120, 0.1));
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .foto-item .bunga-atas {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.6em;
+            animation: bungaAtas 2.5s ease-in-out infinite 0.5s;
+            filter: drop-shadow(0 0 15px rgba(255, 50, 120, 0.1));
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .foto-item .bunga-bawah {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.6em;
+            animation: bungaBawah 2.5s ease-in-out infinite 1.5s;
+            filter: drop-shadow(0 0 15px rgba(255, 50, 120, 0.1));
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        @keyframes bungaKiri {
+            0%, 100% { transform: translateY(-50%) rotate(-8deg) translateX(0); }
+            50% { transform: translateY(-50%) rotate(8deg) translateX(-5px); }
+        }
+        
+        @keyframes bungaKanan {
+            0%, 100% { transform: translateY(-50%) rotate(8deg) translateX(0); }
+            50% { transform: translateY(-50%) rotate(-8deg) translateX(5px); }
+        }
+        
+        @keyframes bungaAtas {
+            0%, 100% { transform: translateX(-50%) rotate(-5deg) translateY(0); }
+            50% { transform: translateX(-50%) rotate(5deg) translateY(-5px); }
+        }
+        
+        @keyframes bungaBawah {
+            0%, 100% { transform: translateX(-50%) rotate(5deg) translateY(0); }
+            50% { transform: translateX(-50%) rotate(-5deg) translateY(5px); }
+        }
+        
+        /* ===== TALI DEKORATIF ===== */
+        .tali-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 0;
+            position: relative;
+        }
+        
+        .tali-garis {
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 50, 120, 0.15) 10%, 
+                rgba(255, 50, 120, 0.4) 30%,
+                rgba(255, 215, 0, 0.3) 50%,
+                rgba(255, 50, 120, 0.4) 70%,
+                rgba(255, 50, 120, 0.15) 90%,
+                transparent
+            );
+            position: relative;
+            animation: taliPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes taliPulse {
+            0%, 100% { opacity: 0.5; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.5); }
+        }
+        
+        .tali-garis::before {
+            content: '💗';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            animation: taliHeart 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 50, 120, 0.2));
+        }
+        
+        @keyframes taliHeart {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.3); }
+        }
+        
+        .tali-garis::after {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            color: rgba(255, 50, 120, 0.2);
+            animation: taliStar 2.5s ease-in-out infinite 0.5s;
+        }
+        
+        .tali-garis .tali-star-2 {
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            color: rgba(255, 50, 120, 0.2);
+            animation: taliStar 2.5s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes taliStar {
+            0%, 100% { opacity: 0.2; transform: translateY(-50%) scale(1); }
+            50% { opacity: 0.8; transform: translateY(-50%) scale(1.5); }
+        }
+        
+        /* ============================================================ */
+        /* ===== SPACER 1 LAYAR (FOTO → SURAT) ===== */
+        /* ============================================================ */
+        .spacer-foto-ke-surat {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .spacer-foto-ke-surat .scroll-hint-bottom {
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 0.7em;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            animation: hintPulse 2s ease-in-out infinite;
+        }
+        
+        .spacer-foto-ke-surat .tali-panjang {
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 50, 120, 0.2), rgba(255, 215, 0, 0.2), rgba(255, 50, 120, 0.2), transparent);
+            animation: taliPulse 4s ease-in-out infinite;
+        }
+        
+        /* ============================================================ */
+        /* ===== SURAT CINTA ===== */
+        /* ============================================================ */
+        .letter-wrapper {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 0;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+            padding: 0 10px;
+        }
+        
+        .letter-wrapper.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .kertas-surat {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 35px 28px;
+            box-shadow: 
+                0 2px 30px rgba(0, 0, 0, 0.3),
+                0 8px 50px rgba(255, 45, 120, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            text-align: left;
+        }
+        
+        .kertas-surat::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 17px;
+            background: linear-gradient(135deg, rgba(255, 50, 120, 0.1), transparent, rgba(255, 50, 120, 0.05));
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* ===== GARIS RUMPUT ===== */
+        .garis-rumput {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 18px;
+        }
+        
+        .garis-rumput::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255, 50, 120, 0.08) 0px,
+                    rgba(255, 50, 120, 0.08) 3px,
+                    transparent 3px,
+                    transparent 8px,
+                    rgba(255, 50, 120, 0.04) 8px,
+                    rgba(255, 50, 120, 0.04) 11px,
+                    transparent 11px,
+                    transparent 16px,
+                    rgba(255, 215, 0, 0.05) 16px,
+                    rgba(255, 215, 0, 0.05) 19px,
+                    transparent 19px,
+                    transparent 24px
+                );
+            background-size: 24px 8px;
+            animation: rumputBergoyang 3s ease-in-out infinite;
+        }
+        
+        @keyframes rumputBergoyang {
+            0%, 100% { background-position: 0px 0px; }
+            50% { background-position: 12px 0px; }
+        }
+        
+        .garis-rumput-alt {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 18px;
+        }
+        
+        .garis-rumput-alt::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 5px,
+                    rgba(255, 50, 120, 0.05) 5px,
+                    rgba(255, 50, 120, 0.05) 8px,
+                    transparent 8px,
+                    transparent 12px,
+                    rgba(255, 215, 0, 0.04) 12px,
+                    rgba(255, 215, 0, 0.04) 15px,
+                    transparent 15px,
+                    transparent 20px
+                );
+            background-size: 20px 6px;
+            animation: rumputBergoyang 3.5s ease-in-out infinite 0.5s;
+        }
+        
+        .kertas-surat .stempel {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            font-size: 2em;
+            animation: stampFloat 3s ease-in-out infinite;
+            filter: drop-shadow(0 2px 10px rgba(255, 50, 120, 0.15));
+        }
+        
+        @keyframes stampFloat {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(5deg) scale(1.1); }
+        }
+        
+        .kertas-surat .dekorasi-atas {
+            text-align: center;
+            color: rgba(255, 50, 120, 0.15);
+            font-size: 0.8em;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .for-you {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: 6px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 4px;
+            text-shadow: 0 0 40px rgba(255, 45, 120, 0.1);
+        }
+        
+        .for-you .heart-inline {
+            color: #ff2d78;
+            font-style: normal;
+            animation: pulseGlow 2s ease-in-out infinite;
+            display: inline-block;
+        }
+        
+        .for-you-sub {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.9em;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+        
+        .kertas-surat p {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 2;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+        
+        .kertas-surat .highlight-text {
+            color: #ff6b9d;
+            font-weight: 600;
+        }
+        
+        .kertas-surat .love-quote {
+            text-align: center;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.9em;
+            padding: 10px 0;
+            margin: 12px 0 8px;
+            font-family: 'Times New Roman', Times, serif;
+            border-top: 1px solid rgba(255, 50, 120, 0.06);
+            border-bottom: 1px solid rgba(255, 50, 120, 0.06);
+        }
+        
+        .kertas-surat .signature {
+            text-align: right;
+            font-style: italic;
+            color: #ff6b9d;
+            margin-top: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0 0 30px rgba(255, 45, 120, 0.1);
+        }
+        
+        .kertas-surat .signature .heart-icon {
+            color: #ff2d78;
+        }
+        
+        /* ============================================================ */
+        /* ===== JARAK 1 LAYAR KE BOTOL ===== */
+        /* ============================================================ */
+        .spacer-botol {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .spacer-botol .scroll-hint-bottom {
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 0.7em;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            animation: hintPulse 2s ease-in-out infinite;
+        }
+        
+        .spacer-botol .tali-panjang {
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 50, 120, 0.2), rgba(255, 215, 0, 0.2), rgba(255, 50, 120, 0.2), transparent);
+            animation: taliPulse 4s ease-in-out infinite;
+        }
+        
+        /* ============================================================ */
+        /* ===== BOTOL PESAN (TERLIHAT + SUPER BESAR) ===== */
+        /* ============================================================ */
+        .botol-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .botol-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .botol-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .botol-container.goyang {
+            animation: botolGoyang 0.6s ease-in-out;
+        }
+        
+        @keyframes botolGoyang {
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(-15deg); }
+            40% { transform: rotate(15deg); }
+            60% { transform: rotate(-10deg); }
+            80% { transform: rotate(10deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        /* ===== BOTOL DENGAN WARNA PINK PEKAT ===== */
+        .botol {
+            font-size: 12em;
+            line-height: 1;
+            animation: botolFloat 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+            color: rgba(255, 45, 120, 0.6);
+            text-shadow: 
+                0 0 50px rgba(255, 45, 120, 0.3),
+                0 0 100px rgba(255, 45, 120, 0.1);
+            filter: drop-shadow(0 10px 50px rgba(255, 45, 120, 0.2));
+            position: relative;
+        }
+        
+        /* ===== EFEK GLOW PINK PEKAT ===== */
+        .botol::after {
+            content: '🍾';
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 1em;
+            color: rgba(255, 45, 120, 0.2);
+            text-shadow: 0 0 80px rgba(255, 45, 120, 0.15);
+            filter: blur(2px);
+            z-index: -1;
+        }
+        
+        @keyframes botolFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+        
+        .botol-label {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 3px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* ============================================================ */
+        /* ===== PESAN DARI BOTOL (KERTAS PUTIH) ===== */
+        /* ============================================================ */
+        .pesan-botol {
+            max-width: 420px;
+            width: 100%;
+            margin-top: 25px;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .pesan-botol.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            max-height: 600px;
+        }
+        
+        .kertas-putih {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            padding: 28px 24px;
+            box-shadow: 
+                0 4px 30px rgba(0, 0, 0, 0.2),
+                0 8px 50px rgba(255, 45, 120, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            position: relative;
+        }
+        
+        .kertas-putih::before {
+            content: '💌';
+            position: absolute;
+            top: -14px;
+            right: 15px;
+            font-size: 1.8em;
+            animation: stampFloat 3s ease-in-out infinite;
+        }
+        
+        .kertas-putih .pesan-judul {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-style: italic;
+            color: #2d1b4e;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        
+        .kertas-putih .pesan-judul .heart-pink {
+            color: #ff2d78;
+        }
+        
+        .kertas-putih p {
+            font-family: 'Times New Roman', Times, serif;
+            color: #3d2c2a;
+            line-height: 2.2;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        
+        .kertas-putih .highlight-pink {
+            color: #d41b5a;
+            font-weight: 600;
+        }
+        
+        .kertas-putih .pesan-signature {
+            text-align: right;
+            font-style: italic;
+            color: #d41b5a;
+            margin-top: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        /* ============================================================ */
+        /* ===== JARAK 1 LAYAR KE ROMANTIC QUOTE ===== */
+        /* ============================================================ */
+        .spacer-quote {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .spacer-quote .tali-panjang {
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 50, 120, 0.2), rgba(255, 215, 0, 0.2), rgba(255, 50, 120, 0.2), transparent);
+            animation: taliPulse 4s ease-in-out infinite;
+        }
+        
+        .spacer-quote .scroll-hint-bottom {
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 0.7em;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            animation: hintPulse 2s ease-in-out infinite;
+        }
+        
+        /* ============================================================ */
+        /* ===== UCAPAN ROMANTIS BAHASA INGGRIS ===== */
+        /* ============================================================ */
+        .romantic-quote {
+            padding: 25px 30px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.4em;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 1px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 50, 120, 0.08);
+            border-bottom: 1px solid rgba(255, 50, 120, 0.08);
+            max-width: 450px;
+            animation: quotePulse 3s ease-in-out infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes quotePulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+        
+        .romantic-quote .highlight-pink {
+            color: #ff6b9d;
+            font-weight: 600;
+        }
+        
+        .romantic-quote .small {
+            display: block;
+            font-size: 0.65em;
+            color: rgba(255, 255, 255, 0.2);
+            margin-top: 10px;
+            letter-spacing: 3px;
+        }
+        
+        /* ============================================================ */
+        /* ===== GALERI EMOJI LOVE ===== */
+        /* ============================================================ */
+        .love-emoji-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 2.2em;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .love-emoji-row span {
+            animation: emojiFloat 2.5s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px rgba(255, 50, 120, 0.15));
+        }
+        
+        .love-emoji-row span:nth-child(1) { animation-delay: 0s; }
+        .love-emoji-row span:nth-child(2) { animation-delay: 0.3s; }
+        .love-emoji-row span:nth-child(3) { animation-delay: 0.6s; }
+        .love-emoji-row span:nth-child(4) { animation-delay: 0.9s; }
+        .love-emoji-row span:nth-child(5) { animation-delay: 1.2s; }
+        .love-emoji-row span:nth-child(6) { animation-delay: 1.5s; }
+        .love-emoji-row span:nth-child(7) { animation-delay: 1.8s; }
+        
+        @keyframes emojiFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.1); }
+        }
+        
+        /* ============================================================ */
+        /* ===== ANIMASI FADE IN SAAT SCROLL ===== */
+        /* ============================================================ */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ============================================================ */
+        /* ===== LIGHTBOX ===== */
+        /* ============================================================ */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: lightboxFade 0.4s ease-out;
+        }
+        
+        .lightbox.show {
+            display: flex;
+        }
+        
+        @keyframes lightboxFade {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            animation: lightboxZoom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        @keyframes lightboxZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.5) rotate(-3deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 50, 120, 0.15);
+            display: block;
+        }
+        
+        .lightbox-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 2.5em;
+            padding: 20px 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            line-height: 1;
+            user-select: none;
+        }
+        
+        .lightbox-arrow:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        .lightbox-arrow.prev { left: 20px; }
+        .lightbox-arrow.next { right: 20px; }
+        
+        .lightbox-counter {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.3);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* ============================================================ */
+        /* ===== FOTO PLACEHOLDER ===== */
+        /* ============================================================ */
+        .foto-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 45, 120, 0.05);
+            color: rgba(255, 255, 255, 0.15);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.7em;
+            font-style: italic;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .foto-placeholder .icon {
+            font-size: 2em;
+            opacity: 0.3;
+            margin-bottom: 5px;
+        }
+        
+        /* ============================================================ */
+        /* ===== RESPONSIVE ===== */
+        /* ============================================================ */
+        @media (max-width: 500px) {
+            .judul-utama { font-size: 2em; }
+            .hai-sayang { font-size: 2em; }
+            .emoji-big { font-size: 3.5em; }
+            .flower { font-size: 18px; }
+            .love-emoji-row { font-size: 1.6em; gap: 10px; }
+            
+            .foto-list { max-width: 220px; }
+            .foto-title { font-size: 1em; }
+            .foto-item .overlay span { font-size: 0.9em; }
+            
+            .foto-item .bunga-kiri,
+            .foto-item .bunga-kanan { font-size: 1.5em; }
+            .foto-item .bunga-kiri { left: -18px; }
+            .foto-item .bunga-kanan { right: -18px; }
+            .foto-item .bunga-atas,
+            .foto-item .bunga-bawah { font-size: 1.2em; }
+            
+            .tali-container { padding: 18px 0; }
+            .tali-garis { width: 90%; }
+            .tali-garis::before { font-size: 1em; }
+            
+            .kertas-surat { padding: 25px 18px; }
+            .kertas-surat p { font-size: 0.92em; line-height: 1.9; }
+            .for-you { font-size: 2.2em; letter-spacing: 4px; }
+            .for-you-sub { font-size: 0.8em; }
+            .kertas-surat .stempel { font-size: 1.5em; top: -10px; right: 10px; }
+            
+            .botol { font-size: 7em; }
+            .romantic-quote { font-size: 1.1em; padding: 18px 20px; }
+            
+            .kertas-putih { padding: 20px 16px; }
+            .kertas-putih p { font-size: 0.88em; line-height: 2; }
+            .kertas-putih .pesan-judul { font-size: 1em; }
+            
+            .lightbox-arrow {
+                font-size: 1.8em;
+                padding: 14px 12px;
+            }
+            .lightbox-arrow.prev { left: 8px; }
+            .lightbox-arrow.next { right: 8px; }
+            .lightbox-counter { font-size: 0.75em; padding: 5px 14px; bottom: 20px; }
+            
+            .spacer-foto-ke-surat .scroll-hint-bottom,
+            .spacer-botol .scroll-hint-bottom,
+            .spacer-quote .scroll-hint-bottom { font-size: 0.6em; }
+        }
+        
+        @media (max-width: 380px) {
+            .judul-utama { font-size: 1.6em; }
+            .hai-sayang { font-size: 1.5em; }
+            .emoji-big { font-size: 3em; }
+            .flower { font-size: 14px; }
+            .love-emoji-row { font-size: 1.3em; gap: 6px; }
+            
+            .foto-list { max-width: 180px; }
+            .foto-title { font-size: 0.85em; }
+            .foto-item .overlay span { font-size: 0.7em; }
+            
+            .foto-item .bunga-kiri,
+            .foto-item .bunga-kanan { font-size: 1.2em; }
+            .foto-item .bunga-kiri { left: -14px; }
+            .foto-item .bunga-kanan { right: -14px; }
+            .foto-item .bunga-atas,
+            .foto-item .bunga-bawah { font-size: 1em; }
+            .foto-item .bunga-atas { top: -12px; }
+            .foto-item .bunga-bawah { bottom: -12px; }
+            
+            .tali-container { padding: 14px 0; }
+            .tali-garis::before { font-size: 0.8em; }
+            
+            .kertas-surat { padding: 20px 14px; }
+            .kertas-surat p { font-size: 0.82em; line-height: 1.8; }
+            .for-you { font-size: 1.8em; letter-spacing: 3px; }
+            .for-you-sub { font-size: 0.7em; }
+            .kertas-surat .signature { font-size: 0.95em; }
+            .kertas-surat .stempel { font-size: 1.2em; top: -8px; right: 8px; }
+            
+            .botol { font-size: 5em; }
+            .romantic-quote { font-size: 0.95em; padding: 14px 16px; }
+            
+            .kertas-putih { padding: 16px 12px; }
+            .kertas-putih p { font-size: 0.78em; line-height: 1.9; }
+            .kertas-putih .pesan-judul { font-size: 0.9em; }
+            
+            .lightbox-arrow {
+                font-size: 1.4em;
+                padding: 10px 8px;
+            }
+            .lightbox-arrow.prev { left: 4px; }
+            .lightbox-arrow.next { right: 4px; }
+            .lightbox-counter { font-size: 0.65em; padding: 4px 10px; bottom: 15px; }
+            
+            .spacer-foto-ke-surat .scroll-hint-bottom,
+            .spacer-botol .scroll-hint-bottom,
+            .spacer-quote .scroll-hint-bottom { font-size: 0.5em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- ===== BACKGROUND LAMPU ===== -->
+<!-- ============================================================ -->
+<div class="bg-lights">
+    <div class="bg-light" style="top: 10%; left: 5%; background: rgba(255, 50, 120, 0.15); animation-delay: 0s;"></div>
+    <div class="bg-light" style="top: 20%; right: 10%; background: rgba(255, 100, 200, 0.12); animation-delay: 1s;"></div>
+    <div class="bg-light" style="bottom: 30%; left: 15%; background: rgba(200, 50, 255, 0.10); animation-delay: 2s;"></div>
+    <div class="bg-light" style="bottom: 20%; right: 5%; background: rgba(255, 200, 100, 0.10); animation-delay: 0.5s;"></div>
+    <div class="bg-light" style="top: 50%; left: 50%; background: rgba(255, 50, 120, 0.08); animation-delay: 1.5s; width: 300px; height: 300px;"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ===== BUNGA JATUH ===== -->
+<!-- ============================================================ -->
+<div class="flowers" id="flowersContainer"></div>
+
+<!-- ============================================================ -->
+<!-- ===== KONTEN SURAT ===== -->
+<!-- ============================================================ -->
+<div class="content">
+
+    <!-- ===== SECTION 1: JUDUL ===== -->
+    <div class="section-judul fade-section" id="section1">
+        <div class="ornament">✦ ✦ ✦</div>
+        <span class="emoji-big">💗</span>
+        <h1 class="judul-utama">HAII SAYANGGKU💗 aku buat ini khusus untuk dirimuu
+        </h1>
+        <div class="scroll-hint">⬇ scroll ke bawah ⬇</div>
+    </div>
+
+    <!-- ===== SECTION 2: "hai sayanggg" ===== -->
+    <div class="section-hai fade-section" id="section2">
+        <div class="hai-sayang">
+            TERIMA KASIH KARNA TELAH MAU BERSAMAKU LAGIH <span class="heart">💗</span>
+        </div>
+        <div class="scroll-hint">⬇ scroll ke bawah ⬇</div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== SECTION 3: FOTO + TALI ===== -->
+    <!-- ============================================================ -->
+    <div class="section-foto fade-section" id="section3">
+        
+        <div class="foto-title">✦ <span class="highlight">foto</span> ✦</div>
+        
+        <div class="foto-list">
+            
+            <!-- FOTO 1 -->
+            <div class="foto-item" onclick="openLightbox(0)">
+                <span class="bunga-kiri">🌹</span>
+                <span class="bunga-kanan">🌷</span>
+                <span class="bunga-atas">🌸</span>
+                <span class="bunga-bawah">🌺</span>
+                <img src="foto1.jpg" alt="Foto 1 💗" id="foto1">
+                <div class="overlay">
+                    <span>💗</span>
+                    <span>💕</span>
+                    <span>💗</span>
+                </div>
+            </div>
+            
+            <div class="tali-container">
+                <div class="tali-garis">
+                    <span class="tali-star-2">✦</span>
+                </div>
+            </div>
+            
+            <!-- FOTO 2 -->
+            <div class="foto-item" onclick="openLightbox(1)">
+                <span class="bunga-kiri">🌺</span>
+                <span class="bunga-kanan">🌻</span>
+                <span class="bunga-atas">🌷</span>
+                <span class="bunga-bawah">🌹</span>
+                <img src="foto2.jpg" alt="Foto 2 💗" id="foto2">
+                <div class="overlay">
+                    <span>💕</span>
+                    <span>💗</span>
+                    <span>💕</span>
+                </div>
+            </div>
+            
+            <div class="tali-container">
+                <div class="tali-garis">
+                    <span class="tali-star-2">✦</span>
+                </div>
+            </div>
+            
+            <!-- FOTO 3 -->
+            <div class="foto-item" onclick="openLightbox(2)">
+                <span class="bunga-kiri">🌷</span>
+                <span class="bunga-kanan">🌸</span>
+                <span class="bunga-atas">🌹</span>
+                <span class="bunga-bawah">🌻</span>
+                <img src="foto3.jpg" alt="Foto 3 💗" id="foto3">
+                <div class="overlay">
+                    <span>💗</span>
+                    <span>💖</span>
+                    <span>💗</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ============================================================ -->
+        <!-- ===== SPACER 1 LAYAR (FOTO → SURAT) ===== -->
+        <!-- ============================================================ -->
+        <div class="spacer-foto-ke-surat">
+            <div class="tali-panjang"></div>
+            <div class="scroll-hint-bottom">⬇ scroll untuk surat ⬇</div>
+            <div class="tali-panjang"></div>
+        </div>
+        
+        <!-- ============================================================ -->
+        <!-- ===== SURAT CINTA ===== -->
+        <!-- ============================================================ -->
+        <div class="letter-wrapper" id="letterWrapper">
+            
+            <div class="kertas-surat">
+                
+                <div class="stempel">💗</div>
+                <div class="dekorasi-atas">✦ ✦ ✦</div>
+                
+                <div class="for-you">
+                    FOR <span class="heart-inline">💗</span> YOU
+                </div>
+                <div class="for-you-sub" id="namaPacar">— Pacarku Tersayang —</div>
+                
+                <div class="garis-rumput">
+                    <p>
+                        Terima kasih sudah menjadi <span class="highlight-text">cahaya</span> 
+                        di hidupku. Setiap hari bersamamu adalah hari yang paling indah. 🌟
+                    </p>
+                </div>
+                
+                <div class="garis-rumput-alt">
+                    <p>
+                        Kamu adalah alasan aku tersenyum setiap hari. 
+                        Aku bersyukur banget <span class="highlight-text">punya kamu</span> 
+                        di hidupku. 💕
+                    </p>
+                </div>
+                
+                <div class="garis-rumput">
+                    <p>
+                        <span class="highlight-text">Terima kasih</span> untuk semua 
+                        kebahagiaan yang kamu berikan. 
+                        Semoga kita selalu bersama ya sayang. 💗
+                    </p>
+                </div>
+                
+                <div class="love-quote">
+                    ❝ Aku mencintaimu bukan hanya hari ini, 
+                    tapi setiap hari sampai kapanpun ❞
+                </div>
+                
+                <div class="signature">
+                    Dari pacarmu, <br>
+                    <span class="heart-icon">💗</span> <strong id="namaKamu">[Nama Kamu]</strong> <span class="heart-icon">💗</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ============================================================ -->
+        <!-- ===== JARAK 1 LAYAR KE BOTOL ===== -->
+        <!-- ============================================================ -->
+        <div class="spacer-botol">
+            <div class="tali-panjang"></div>
+            <div class="scroll-hint-bottom">⬇ scroll untuk kejutan ⬇</div>
+            <div class="tali-panjang"></div>
+        </div>
+        
+        <!-- ============================================================ -->
+        <!-- ===== BOTOL PESAN (TERLIHAT + SUPER BESAR) ===== -->
+        <!-- ============================================================ -->
+        <div class="botol-section fade-section" id="botolSection">
+            
+            <div class="botol-container" id="botolContainer" onclick="bukaBotol()">
+                <div class="botol" id="botol">🍾</div>
+                <div class="botol-label">✦ klik botolnya ✦</div>
+            </div>
+            
+            <!-- ===== PESAN DARI BOTOL ===== -->
+            <div class="pesan-botol" id="pesanBotol">
+                <div class="kertas-putih">
+                    <div class="pesan-judul">
+                        💗 <span class="heart-pink">surat</span> dari botol 💗
+                    </div>
+                    <p>
+                        Hai sayanggg... <span class="highlight-pink">💕</span>
+                    </p>
+                    <p>
+                        Aku harap kamu selalu <span class="highlight-pink">bahagia</span> 
+                        dan tersenyum setiap hari. Kamu adalah orang yang paling 
+                        <span class="highlight-pink">istimewa</span> di hidupku
+                    </p>
+                    <p>
+                        Jangan pernah lupa kalau ada seseorang yang selalu 
+                        <span class="highlight-pink">menyayangimu</span> 
+                        dan akan selalu ada untukmu. 💗
+                    </p>
+                    <p style="font-style: italic; color: rgba(61, 44, 42, 0.6); text-align: center; font-size: 0.9em;">
+                        "Cinta sejati tidak pernah berakhir, 
+                        ia hanya terus bertumbuh."
+                    </p>
+                    <div class="pesan-signature">
+                        💗 Dari seseorang yang <br> sangat menyayangimu 💗
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!-- ===== JARAK 1 LAYAR KE ROMANTIC QUOTE ===== -->
+            <!-- ============================================================ -->
+            <div class="spacer-quote">
+                <div class="tali-panjang"></div>
+                <div class="scroll-hint-bottom">⬇ scroll untuk kata-kata ⬇</div>
+                <div class="tali-panjang"></div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!-- ===== UCAPAN ROMANTIS BAHASA INGGRIS ===== -->
+            <!-- ============================================================ -->
+            <div class="romantic-quote">
+                <span class="highlight-pink">"You are the reason</span> 
+                my heart beats, my soul smiles, 
+                and my world feels complete. 
+                <span class="highlight-pink">I love you</span> 
+                more than words can express. 
+                <span class="highlight-pink">Forever and always</span>, 
+                you are my everything. 💗"
+                <span class="small">— for you, my one and only —</span>
+            </div>
+            
+            <div class="love-emoji-row">
+                <span>💗</span>
+                <span>💕</span>
+                <span>💖</span>
+                <span>✨</span>
+                <span>💘</span>
+                <span>🌹</span>
+                <span>💝</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- ===== LIGHTBOX ===== -->
+<!-- ============================================================ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    
+    <button class="lightbox-arrow prev" onclick="event.stopPropagation(); prevFoto();">‹</button>
+    
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img src="" alt="Foto" id="lightboxImg">
+    </div>
+    
+    <button class="lightbox-arrow next" onclick="event.stopPropagation(); nextFoto();">›</button>
+    
+    <div class="lightbox-counter" id="lightboxCounter">1 / 3</div>
+</div>
+
+<script>
+    // =================================================
+    // 1. NAMA (GANTI INI!)
+    // =================================================
+    const NAMA_KAMU = " FIKRI";      // Nama kamu
+    const NAMA_PACAR = "Dina Fatihatul Aulia";      // Nama pacar (opsional)
+    
+    // =================================================
+    // 2. DAFTAR FOTO (GANTI DENGAN FILE FOTO KAMU!)
+    // =================================================
+    const fotoList = [
+        "foto1.jpg",
+        "foto2.jpg",
+        "foto3.jpg"
+    ];
+    
+    let currentFotoIndex = 0;
+    let botolTerbuka = false;
+    
+    // =================================================
+    // 3. BUNGA JATUH
+    // =================================================
+    function createFlowers() {
+        const container = document.getElementById('flowersContainer');
+        const flowerSymbols = ['🌸', '🌺', '🌷', '🌹', '🌻', '💐', '🌼', '🌸', '🌺', '🌷', '💗', '🌺'];
+        
+        for (let i = 0; i < 40; i++) {
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.textContent = flowerSymbols[Math.floor(Math.random() * flowerSymbols.length)];
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.fontSize = (Math.random() * 20 + 14) + 'px';
+            flower.style.animationDuration = (Math.random() * 12 + 8) + 's';
+            flower.style.animationDelay = (Math.random() * 20) + 's';
+            flower.style.opacity = Math.random() * 0.25 + 0.1;
+            container.appendChild(flower);
+        }
+    }
+    
+    // =================================================
+    // 4. SET NAMA
+    // =================================================
+    function setNama() {
+        const namaKamuElement = document.getElementById('namaKamu');
+        const namaPacarElement = document.getElementById('namaPacar');
+        
+        if (namaKamuElement) {
+            namaKamuElement.textContent = NAMA_KAMU;
+        }
+        if (namaPacarElement && NAMA_PACAR) {
+            namaPacarElement.textContent = NAMA_PACAR;
+        }
+    }
+    
+    // =================================================
+    // 5. SCROLL UNTUK SURAT
+    // =================================================
+    function handleSuratScroll() {
+        const letter = document.getElementById('letterWrapper');
+        const rect = letter.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight * 0.85) {
+            letter.classList.add('show');
+        }
+    }
+    
+    // =================================================
+    // 6. BOTOL PESAN
+    // =================================================
+    function bukaBotol() {
+        const botol = document.getElementById('botol');
+        const container = document.getElementById('botolContainer');
+        const pesan = document.getElementById('pesanBotol');
+        
+        if (!botolTerbuka) {
+            botolTerbuka = true;
+            
+            // Goyang botol
+            container.classList.add('goyang');
+            
+            setTimeout(() => {
+                container.classList.remove('goyang');
+            }, 600);
+            
+            // Tampilkan pesan
+            setTimeout(() => {
+                pesan.classList.add('show');
+            }, 700);
+        } else {
+            // Tutup botol
+            botolTerbuka = false;
+            pesan.classList.remove('show');
+            container.classList.add('goyang');
+            setTimeout(() => {
+                container.classList.remove('goyang');
+            }, 600);
+        }
+    }
+    
+    // =================================================
+    // 7. LIGHTBOX
+    // =================================================
+    function openLightbox(index) {
+        currentFotoIndex = index;
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        const counter = document.getElementById('lightboxCounter');
+        
+        img.src = fotoList[index];
+        counter.textContent = (index + 1) + ' / ' + fotoList.length;
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox(event) {
+        if (event && event.target !== event.currentTarget) return;
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+    
+    function prevFoto() {
+        currentFotoIndex = (currentFotoIndex - 1 + fotoList.length) % fotoList.length;
+        const img = document.getElementById('lightboxImg');
+        const counter = document.getElementById('lightboxCounter');
+        img.src = fotoList[currentFotoIndex];
+        counter.textContent = (currentFotoIndex + 1) + ' / ' + fotoList.length;
+        img.style.animation = 'none';
+        setTimeout(() => {
+            img.style.animation = 'lightboxZoom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        }, 10);
+    }
+    
+    function nextFoto() {
+        currentFotoIndex = (currentFotoIndex + 1) % fotoList.length;
+        const img = document.getElementById('lightboxImg');
+        const counter = document.getElementById('lightboxCounter');
+        img.src = fotoList[currentFotoIndex];
+        counter.textContent = (currentFotoIndex + 1) + ' / ' + fotoList.length;
+        img.style.animation = 'none';
+        setTimeout(() => {
+            img.style.animation = 'lightboxZoom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        }, 10);
+    }
+    
+    // =================================================
+    // 8. KEYBOARD NAVIGATION
+    // =================================================
+    document.addEventListener('keydown', function(e) {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox.classList.contains('show')) return;
+        
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            prevFoto();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            nextFoto();
+        }
+    });
+    
+    // =================================================
+    // 9. SWIPE TOUCH
+    // =================================================
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox.classList.contains('show')) return;
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox.classList.contains('show')) return;
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextFoto();
+            } else {
+                prevFoto();
+            }
+        }
+    });
+    
+    // =================================================
+    // 10. FADE SECTION SCROLL
+    // =================================================
+    function handleFadeScroll() {
+        const sections = document.querySelectorAll('.fade-section');
+        
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight * 0.75) {
+                section.classList.add('visible');
+            }
+        });
+    }
+    
+    // =================================================
+    // 11. START!
+    // =================================================
+    window.onload = function() {
+        createFlowers();
+        setNama();
+        
+        handleFadeScroll();
+        handleSuratScroll();
+        
+        window.addEventListener('scroll', function() {
+            handleFadeScroll();
+            handleSuratScroll();
+        });
+    };
+</script>
+
+</body>
+</html>
